@@ -1,0 +1,138 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  color: white;
+  width: 100%;
+  background-color: #27053d;
+}
+
+.cuerpo__cabeza {
+  height: 50vh;
+  width: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.cuerpo__cabeza__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-user-drag: none;
+}
+
+.cuerpo__cabeza__img h2 {
+  position: relative;
+}
+
+.cuerpo__informacion {
+  background-color: rgba(255, 0, 0, 0);
+  position: absolute;
+  top: 85%;
+
+  left: 0;
+  right: 0;
+}
+
+.cuerpo__informacion h5 {
+  font-size: 1.2em;
+}
+
+.cuerpo__informacion a {
+  color: white;
+  border-radius: 5em;
+}
+
+.cuerpo__informacion a:hover {
+  background-color: rgb(8, 149, 184);
+  color: white;
+}
+
+/* inicio flip card */
+.card-flip {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card-flip.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  /* line-height: 260px; */
+  text-align: center;
+  font-weight: bold;
+
+  backface-visibility: hidden;
+  color: black;
+}
+
+.card__face--front {
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+.card__face__back {
+}
+
+/* fin flip card */
+.shadow {
+  box-shadow: 29px 27px 5px 0px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: 29px 27px 5px 0px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 29px 27px 5px 0px rgba(0, 0, 0, 0.83);
+}
+
+.cuerpo__group {
+  height: 35em;
+  width: 50em;
+  position: relative;
+  left: -29em;
+  top: -24em;
+}
+
+.cuerpo__group_card {
+  width: 15em;
+  height: 18em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  background-color: white;
+  display: inline-block;
+}
+
+/* animacion */
+@keyframes clickMe {
+  0% {
+    /* Estilos iniciales */
+    transform: scale(0.9);
+    color: black;
+  }
+  50% {
+    /* Estilos a medio camino de la animación */
+    transform: scale(1);
+    color: rgb(4, 4, 185);
+  }
+  100% {
+    /* Estilos finales */
+    transform: scale(1.1);
+    color: rgb(80, 1, 182);
+  }
+}
+
+.clickMe-element {
+  animation-name: clickMe;
+  animation-duration: 1s; /* Duración de la animación */
+  animation-iteration-count: infinite; /* Repetir infinitamente */
+  animation-timing-function: linear; /* Función de temporización de la animación */
+  animation-direction: alternate;
+  animation-delay: 1s; /* Retraso antes de que comience la animación */
+}
