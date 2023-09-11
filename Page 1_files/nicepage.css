@@ -5548,11 +5548,7 @@ a {
 .u-form-select-wrapper select[size] ~ .u-caret {
   display: none;
 }
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+
 html {
   height: 100%;
   overflow-y: auto;
