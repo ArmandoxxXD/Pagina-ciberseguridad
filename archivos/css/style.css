@@ -105,8 +105,10 @@
   height: 18em;
   margin-left: 1em;
   margin-bottom: 1em;
-  background-color: white;
+  background-color: white !important;
   display: inline-block;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 /* animacion */
